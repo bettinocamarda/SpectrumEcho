@@ -14,6 +14,8 @@
     --button-border-color: #080904;
 }
 
+
+
 /* Reset di base e stili globali */
 * {
     font-family: 'Roboto', sans-serif;
@@ -446,12 +448,20 @@ input[type="submit"]:hover, button:hover {
     .big-title, .before-after, .settings, .footer, .upload-image {
         width: 100%;
         text-align: center;
+        padding: 10px; /* Aggiungi un po' di padding se necessario */
     }
 
     .big-title img.logo-spectrumecho, .before-after-img {
-        max-width: 100%;
+        max-width: 80%; /* Ridimensiona le immagini se necessario */
         height: auto;
+        margin: 0 auto; /* Centra le immagini */
     }
+
+    .big-title {
+        font-size: 18px; /* Riduci la dimensione del font per i titoli */
+    }
+
+    /* Qui puoi aggiungere ulteriori regolazioni specifiche per smartphone */
 }
 
 /* ... */
