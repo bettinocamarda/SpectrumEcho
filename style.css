@@ -1,9 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
+/* Variabili CSS */
+:root {
+    --text-color: #ffffff;
+    --background-color: #080904;
+    --highlight-color: #E2D5CD;
+    --font-size-large: 70px;
+    --font-size-medium: 40px;
+    --font-size-small: 20px;
+    --link-color: #ffffff;
+    --hover-text-color: red;
+    --button-background-color: transparent;
+    --button-border-color: #080904;
+}
+
+/* Reset di base e stili globali */
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    color: #ffffff; /* Testo bianco */
+    color: var(--text-color);
 }
 
 html, body {
@@ -11,9 +26,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #080904; /* Sfondo scuro */
+    background-color: var(--background-color);
 }
 
+/* Layout principale */
 .container {
     display: flex;
     flex-direction: column;
@@ -21,6 +37,7 @@ html, body {
     height: 100%;
 }
 
+/* Stili per le pagine */
 .first-page, .page {
     width: 100%;
     display: flex;
@@ -28,167 +45,158 @@ html, body {
     align-items: center;
 }
 
+/* Header con logo */
 #logo-link {
     text-decoration: none;
-    color: white;
+    color: var(--link-color);
     margin: 0;
     padding: 0;
 }
 
 .big-title {
     display: flex;
+    flex-direction: column; /* Imposta i figli in colonna invece che in riga */
     justify-content: center;
     align-items: center;
-    font-size: 70px;
     text-align: center;
 }
 
 .big-title img.logo-spectrumecho {
-    max-width: 200px; /* Ridimensiona il logo */
+    max-width: 270px; /* Regola la dimensione del logo secondo necessità */
     height: auto;
+    margin-bottom: 10px; /* Aggiungi un po' di spazio tra il logo e il testo */
 }
 
-/* ... Continua con lo stile delle altre classi ... */
-
-/* Media Query per dispositivi con schermo fino a 600px */
-@media only screen and (max-width: 600px) {
-    .before-after-img {
-        width: 300px;
-        height: auto;
-    }
+.big-title p {
+    font-size: 20px; /* Aggiusta la dimensione del font se necessario */
+    color: #ffffff; /* Colore del testo, cambialo secondo le tue preferenze */
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
 
-.first-page {
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-#logo-link {
-    text-decoration: none;
-    color: black;
-    font-family: Jomhuria, cursive;
-    margin-top: -60px;
-    margin-bottom: 50px;
-    width: 270px;
-    border-bottom: solid 10px #080904;
-    height: 55px;
-}
-
-.big-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    font-size: 70px;
-    text-align: center;
-    padding-left: 70px;
-}
-
+/* Stili per before-after e slider */
 .before-after {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
 }
 
 .before-after-img {
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 
-.click-button {
-    -webkit-appearance: none;
-    border: 0;
-    outline: 0;
+/* Ridurre la distanza tra before-after e logo-container */
+.before-after {
+    margin-bottom: 5px; /* Riduci questo valore per meno spazio */
 }
 
-.upload-image {
+.logo-container {
+    text-align: center;
+    /* Altri stili se necessari */
+}
+
+.created-by {
+    font-size: var(--font-size-small); /* Usa una dimensione di font più piccola */
+    color: var(--text-color); /* Colore del testo */
+    display: block; /* Assicurati che sia su una nuova linea */
+    margin-bottom: 5px; /* Spazio prima del logo */
+}
+
+
+/* Bottone di upload e impostazioni */
+.upload-image, .inline-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    font-size: 40px;
+    font-size: var(--font-size-medium);
     text-align: center;
     cursor: pointer;
-    width: 600px;
+    width: 100%;
     min-height: 70px;
     border: 0;
     outline: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: var(--button-background-color);
     margin-top: 100px;
     position: relative;
 }
 
-.upload-image::before {
+.upload-image::before, .inline-button::before {
     content: "";
     position: absolute;
     bottom: 10px;
     left: 0;
     width: 100%;
     height: 20px;
-    border-bottom: solid 20px #080904;
+    border-bottom: solid 20px var(--button-border-color);
     z-index: -1;
 }
 
-.inline-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    font-size: 50px;
-    text-align: center;
+/* Responsive Design per dispositivi mobili */
+@media only screen and (max-width: 600px) {
+    .big-title img.logo-spectrumecho {
+        max-width: 300px;
+    }
+
+    .big-title {
+        font-size: var(--font-size-medium);
+    }
+
+    .upload-image {
+        font-size: var(--font-size-small);
+        width: 300px;
+        padding: 10px;
+    }
+
+    /* Altre regole responsive qui */
+}
+
+/* Stili specifici per altri elementi */
+.settings {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-row, .control, .nr-input, .credits, .footer {
+    /* Stili specifici per questi elementi */
+}
+
+/* Stili per hover e interazioni */
+.logo-container a:hover .hover-text {
+    visibility: visible;
+    opacity: 1;
+    color: var(--hover-text-color);
+}
+
+/* Altri stili specifici */
+/* ... */
+/* ... (precedente codice CSS) ... */
+
+/* Stili per i controlli di input e bottoni */
+.control, .nr-input, .inline-button, #fileBrowser {
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: none;
+    padding: 10px;
+    margin: 5px;
     cursor: pointer;
-    width: 300px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 0;
-    outline: 0;
-    position: relative;
-}
-.inline-button::before {
-    content: "";
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    border-bottom: solid 20px #080904;
-    z-index: -1;
 }
 
-#fileBrowser {
-    display: none;
-}
-
+/* Stili per etichette e descrizioni */
 div.label {
-    font-size: 60px;
+    font-size: var(--font-size-medium);
     text-align: center;
     margin-top: 60px;
+    color: var(--text-color);
 }
 
-.img-galery {
+/* Stili per la galleria di immagini */
+.img-gallery {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -200,160 +208,92 @@ div.label {
     width: 200px;
     height: auto;
     margin-right: 30px;
-}
-
-.gallery-item:hover {
     cursor: pointer;
-    outline: 2px #080904 solid;
+}
+
+.gallery-item:hover, .img-selected {
+    outline: 2px solid var(--highlight-color);
     outline-offset: -6px;
 }
 
-.img-selected {
-    outline: 2px #080904 solid;
-    outline-offset: -6px;
-}
-
-
-.settings {
+/* Stili per i crediti e il footer */
+.credits, .footer {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    font-size: var(--font-size-small);
 }
 
-.settings>span {
-    font-size: 40px;
+.credits-title {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--text-color);
 }
 
-.settings-row {
-    width: 100%;
-    margin-top: 50px;
-    /* margin-bottom: 50px; */
+.credits a, .connect-link {
+    text-decoration: none;
+    margin-top: 5px;
+    color: var(--link-color);
+    border-bottom: 5px solid var(--background-color);
+}
+
+/* Stili per i collegamenti social e icone */
+.connect {  
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
-.control {
-    font-size: 40px;
+.connect-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
-.nr-input {
-    font-size: 40px;
-    width: 70px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0);
-    background-color: #080904;
-    border: 0;
+/* Stili per lo schermo di attesa */
+#waitScreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--highlight-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.creator-credit {
-    text-align: center;
-    color: #ffffff; /* o qualsiasi altro colore preferisci */
-    /* Altri stili se necessario */
+#waitMessage {
+    font-size: var(--font-size-large);
+    color: var(--text-color);
 }
 
-
-.invisible {
-    display: none;
-    z-index: -99;
-}
-
+/* Stili per il container di test */
 .test-box-container {
-    width: 900px; height: 700px;
-    display: flex; flex-direction: column;
-    justify-content: center; align-items: center;
+    width: 900px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     position: relative;
+    background-color: var(--background-color);
 }
-#play-icon {
-  box-sizing: border-box;
-  border-color: transparent transparent transparent #202020;
-  position: absolute;
-  top: 0; left: 0;
-  display: flex; flex-direction: column;
-  justify-content: center; align-items: center;
-  background-color: rgba(0, 0, 0, 0.25);
-  background-color: #E2D5CD;
-  opacity: 0.9;
-  width: 900px; height: 700px;
-  cursor: pointer;
-}
+
 #spectrum-canvas {
     background-color: rgba(0, 0, 0, 1);
 }
 
-#download-link-container {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    font-size: 40px;
-    outline: 0;
-}
-
-
-.footer {
-    width: 100%;
-    margin-top: 100px;
-    min-height: 150px;
-    display: flex; flex-direction: row;
-    justify-items: center;
-    font-size: 20px;
-}
-.credits {
-    display: flex; flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-.credits-title {
-    font-size: 30px;
-    font-weight: bold;
-}
-.credits a {
-    text-decoration: none;
-    margin-top: 5px;
-    height: 20px;
-    border-bottom: solid 5px #080904;
-    color: black
-}
-.connect {  
-    display: flex; flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-.connect-link img {
-    width: 24px; height: 24px;
-    margin-right: 10px;
-}
-
-
-#waitScreen {
-    position: fixed;
-    width: 100%; height: 100%;
-    top: 0; left: 0;
-    background-color: #E2D5CD;
-    z-index: 9999;
-}
-
-#waitMessage {
-    width: 100%; height: 100%;
-    font-size: 40px;
-    display: flex; flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Stili per il logo container */
 .logo-container {
     position: relative;
     text-align: center;
-}
-
-.logo-container a {
-    text-decoration: none;
 }
 
 .logo-container img {
@@ -367,27 +307,151 @@ div.label {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff; /* Colore originale */
+    color: var(--text-color);
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s, visibility 0.5s, color 0.5s;
 }
 
-.logo-container:hover .hover-text {
-    visibility: visible;
-    opacity: 1;
-    color: red; /* Cambia colore al rosso */
+/* ... */
+/* ... (precedente codice CSS) ... */
+
+/* Stili per il play icon */
+#play-icon {
+    box-sizing: border-box;
+    border-color: transparent transparent transparent var(--background-color);
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--highlight-color);
+    opacity: 0.9;
+    width: 900px; 
+    height: 700px;
+    cursor: pointer;
 }
 
-.upload-image img {
-    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
-    /* Aggiungi qui altri stili se necessario, come dimensioni, bordi, ecc. */
+/* Stili per il download link container */
+#download-link-container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-size: var(--font-size-medium);
+    outline: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--button-background-color);
+    border: none;
+    padding: 10px;
 }
 
+/* Stili per i controlli audio */
+#audioControls {
+    /* Stili specifici per i controlli audio */
+}
 
+/* Stili per il pulsante play */
+#playButton {
+    font-size: var(--font-size-medium);
+    color: var(--text-color);
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    border: none;
+    padding: 10px;
+}
+
+/* Stili aggiuntivi per interazioni hover e focus */
+a:hover, button:hover, input:hover, #playButton:hover {
+    background-color: var(--highlight-color);
+    color: var(--hover-text-color);
+}
+
+/* Stili per elementi invisibili */
+.invisible {
+    display: none;
+    visibility: hidden;
+}
+
+/* ... */
+/* ... (precedente codice CSS) ... */
+
+/* Stili aggiuntivi per il testo e i paragrafi */
+p {
+    font-size: var(--font-size-small);
+    line-height: 1.6;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+/* Stili per i link */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-text-color);
+    border-bottom: 1px solid var(--hover-text-color);
+}
+
+/* Stili per i form e gli input */
+input, select, textarea {
+    font-size: var(--font-size-small);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--background-color);
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+}
+
+input[type="file"] {
+    font-size: var(--font-size-small);
+}
+
+input[type="submit"], button {
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Stili per il footer */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.footer a {
+    color: var(--link-color);
+    margin: 0 10px;
+}
+
+/* Stili aggiuntivi per la responsività */
 @media only screen and (max-width: 600px) {
-    .before-after-img {
-        width: 300px;
+    .container, .first-page, .page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .big-title, .before-after, .settings, .footer, .upload-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .big-title img.logo-spectrumecho, .before-after-img {
+        max-width: 100%;
         height: auto;
     }
 }
+
+/* ... */
