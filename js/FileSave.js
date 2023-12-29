@@ -2,9 +2,9 @@
  * A saveAs() FileSaver implementation.
  * 2014-11-29
  *
- * By Eli Grey, http://eligrey.com
+ * By Bettino Camarda, https://www.threads.net/@bettino.camarda
  * License: X11/MIT
- *   See https://github.com/eligrey/FileSaver.js/blob/master/LICENSE.md
+ *   See https://github.com/bettinocamarda/FileSaver.js/blob/master/LICENSE.md
  */
 
 /*global self */
