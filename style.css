@@ -379,6 +379,10 @@ div.label {
     color: red; /* Cambia colore al rosso */
 }
 
+.upload-image img {
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+    /* Aggiungi qui altri stili se necessario, come dimensioni, bordi, ecc. */
+}
 
 
 @media only screen and (max-width: 600px) {
