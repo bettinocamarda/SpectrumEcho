@@ -1,58 +1,153 @@
-<html>
-
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./beerslider//beerslider.css">
-    <title>SpectrumEcho - Trasforma un'immagine in suono</title>
-    <meta name="description" content="SpectrumEcho: Trasforma le tue immagini in spettrogrammi sonori. Progetto di Bettino Camarda."> 
-    <meta name="keywords" content="image to sound, image to audio, image, sound, audio, spectrum, spectrogram, encoder">
-    <meta name="author" content="Bettino Camarda">
-    <meta name="og:title" property="og:title" content="SpectrumEcho - Trasforma un'immagine in suono">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	</head>
-
-
-<body>
-    <div class="container">
-        <div class="first-page">
-            <div class="big-title">
-    <a id="logo-link" href="https://github.com/bettinocamarda/SpectrumEcho">
-        <img src="logo2.png" alt="Logo SpectrumEcho" class="logo-spectrumecho"/>
-    </a>
-				
-				
-    <p>Trasforma un'immagine in spettro sonoro</p>
-</div>
-			
-			
-			
-            <div class="before-after">
-                <div id="slider" class="beer-slider" data-beer-label="">
-                    <img class="before-after-img" src="A2.png"alt="image as sound" />
-                    <div class="beer-reveal" data-beer-label="">
-                        <img class="before-after-img" src="A1.png" />
-                    </div>
+<!DOCTYPE html>
+<html lang="ita">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/img/minilogo.jpg" />
+        <!-- SITE TITLE -->
+        <title> SpectrumEcho - Trasforma un'immagine in suono </title>
+        <!-- Latest Bootstrap min CSS -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <!-- Google Font -->
+        <link href="http://fonts.googleapis.com/css?family=Cousine:400,700|Montserrat:400,700" rel="stylesheet" type="text/css">
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <!-- ICO FONT CSS -->
+        <link rel="stylesheet" href="assets/fonts/icofont.css">
+        <!-- venobox -->
+        <link rel="stylesheet" href="assets/venobox/css/venobox.css" />
+        <!--- owl carousel Css-->
+        <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+	
+    <body data-spy="scroll" data-offset="80">
+	
+        <!-- START PRELOADER -->
+        <div class="preloader">
+            <div class="loadscreen">
+                <div class="loadscreen-in">
+                    <h4>SpectrumEcho</h4>
                 </div>
             </div>
         </div>
+        <!-- END PRELOADER -->
 		
-		<div class="logo-container">
-    <span class="created-by">Creato da:</span> <!-- Testo aggiunto -->
-    <a href="https://www.threads.net/@bettino.camarda" target="_blank">
-        <img src="logo-BC.png" alt="Logo">
-    </a>
-</div>
+        <!-- START NAVBAR -->
+        <div class="navbar navbar-default navbar-fixed-top main-menu">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">SpectrumEcho</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <nav>
+                    <ul class="nav navbar-nav navbar-right">
+    <li><a class="page-scroll" href="#home">Home</a></li>
+    <li><a class="page-scroll" href="#image-to-audio">Da Immagine a Audio</a></li>
+    <li><a class="page-scroll" href="#audio-to-image">Da Audio a Immagine</a></li>
+    <li><a class="page-scroll" href="#gallery">Galleria</a></li>
+    <li><a class="page-scroll" href="#contact">Contatti</a></li>
+</ul>
+                    </nav>
+                </div>
+            </div>
+            <!--- END CONTAINER -->
+        </div>
+        <!-- END NAVBAR -->
 		
+        <!-- START SLIDER STATIC -->
+        <section id="home" class="particles home-static section-back-image" data-background="assets/img/bg/particle-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="home-static-text text-center">
+                            <h2 data-wow-delay="0.5s" data-wow-duration="3s" class="wow fadeInRight">SpectrumEcho</h2>
+                            <a data-wow-delay="0.5s" data-wow-duration="3s" href="#about" class="page-scroll btn-home-1 wow fadeInUp">Get Started</a>
+                        </div>
+                    </div>
+                    <!--- END COL -->
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+            <div class="slider-down-btn"> <a href="#about" class="page-scroll"><img src="assets/img/down.png" alt="" /></a> </div>
+        </section>
+        <!-- END SLIDER STATIC -->
 		
-		<div class="page">
-    <label for="fileBrowser" class="upload-image">
-        <img src="UP2.png" alt="Carica un'immagine" />
-    </label>
-    <input id="fileBrowser" type="file" name="name" style="display: none;" accept="image/*">
+        <!-- START ABOUT -->
+        <section id="about" class="section-padding">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="section-title">
+                        <h3>SpectrumEcho</h3>
+                        <div class="line"></div>
+                    </div>
+                    <!-- END SECTION TITLE -->
+                    <div class="col-md-8 col-md-offset-2 wow fadeInUp">
+                        <div class="about-cl-img">
+                            <img src="assets/img/team/logo1.png" alt="hash theme" class="img-responsive">
+                        </div>
+                        <div class="about-cl-info">
+                            <blockquote class="blockquote">
+                                <p>Sviluppato e creato da Bettino Camarda, SpectrumEcho è uno strumento che permette di trasformare immagini in suoni e suoni in immagini. Questa doppia funzionalità apre nuove prospettive, permettendoti di esplorare e creare un legame unico tra il mondo visivo e quello sonoro</p>
+                            
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </section>
+        <!-- END ABOUT -->	
+		
+        <section id="image-to-audio" class="section-padding"><br>
+
+			
+			
+			<div class="page">
+    <!-- Pulsante per il caricamento delle immagini -->
+    <div class="col-md-12" style="text-align: center;">
+        <div class="portfolio-btn">
+            <label for="fileBrowser" class="about-cl-db-2 page-scroll">
+                Carica Immagine
+            </label>
+            <input id="fileBrowser" type="file" name="name" accept="image/*" style="display: none;">
+        </div>
+    </div>
+
+    <!-- Elementi esistenti della pagina -->
     <canvas id="canvas" class="invisible"></canvas>
     <div class="label"></div>
-</div>
+</div><br>
+<br>
+
+
+			
+			
+			
+			
+			
+			
+			
 		
        
 
@@ -183,6 +278,191 @@
 
         });
     </script>
-</body>
+		
+	
+	<section id="audio-to-image" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="section-title text-center">
+                <h3><span> Da audio a immagine </span></h3>
+                <div class="line"></div>
+                <p>La sezione 'Da Audio a Immagine' di SpectrumEcho è in fase di sviluppo. Nel frattempo, visitate <a href="https://audioalter.com/spectrogram" target="_blank">audioalter.com/spectrogram</a> per caricare i vostri file audio e visualizzare lo spettrogramma, scoprendo così la trasformazione del suono in immagini. Grazie per la vostra pazienza e interesse in SpectrumEcho e restate sintonizzati per gli aggiornamenti!</p>
+            </div>
+            <!-- END COL -->
+        </div>
+        <!--- END ROW -->
+    </div>
+    <!--- END CONTAINER -->
+</section>
 
+        <!-- END CONTACT -->
+	
+        <!-- START PORTFOLIO -->
+        <section id="gallery" class="section-padding bg-gray">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="section-title">
+                        <h3<span> Galleria </span></h3>
+                        <div class="line"></div>
+                        <p>Scoprite esempi di spettrogrammi generati con SpectrumEcho nella galleria. Queste immagini rappresentano visualizzazioni uniche del suono, illustrando l'incredibile sinestesia tra il mondo visivo e quello auditivo.</p>
+                    </div>
+                    <!-- END SECTION TITLE -->
+                    
+                    <!--- END COL -->
+                    <div class="portfoli-items">
+                        <div class="col-md-3 col-sm-6 col-xs-12 mix work-item brochure">
+                            <div class="figure effect-hover">
+                                <img class="img-responsive" src="assets/img/a1---laura.png" alt="img01">
+                                <div class="figcaption">
+                                    <h4>Laura Palmer</h4>
+                                    <p>Originale</p>
+                                </div>
+                                <a href="assets/img/a1---laura.png" class="venobox" data-title="Portfolio tittle here" data-gall="gall1"></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 mix work-item flyer">
+                            <div class="figure effect-hover">
+                                <img class="img-responsive" src="assets/img/a1---laura2.png" alt="img01">
+                                <div class="figcaption">
+                                    <h4>Laura Palmer</h4>
+                                    <p>Spettrogramma</p>
+                                </div>
+                                <a href="https://vimeo.com/75976293" class="venobox" data-autoplay="true" data-title="PORTFOLIO VIMEO VIDEO" data-vbtype="vimeo" data-gall="gall1"></a>
+                            </div>
+                        </div>
+                        <!--- END COL -->
+                        <div class="col-md-3 col-sm-6 col-xs-12 mix work-item design">
+                            <div class="figure effect-hover">
+                                <img class="img-responsive" src="assets/img/b1b.png" alt="img01">
+                                <div class="figcaption">
+                                    <h4>Misantropo (Bruegel)</h4>
+                                    <p>Orginale</p>
+                                </div>
+                                <a href="assets/img/b1b.pn" class="venobox" data-autoplay="true" data-title="" data-vbtype="" data-gall="gall1"></a>
+                            </div>
+                        </div>
+                        <!--- END COL -->
+                        <div class="col-md-3 col-sm-6 col-xs-12 mix work-item brochure">
+                            <div class="figure effect-hover">
+                                <img class="img-responsive" src="assets/img/b1a.png" alt="Misantropo">
+                                <div class="figcaption">
+                                    <h4>Misantropo (Bruegel)</h4>
+                                    <p>Spettrogramma</p>
+                                </div>
+                                <a href="assets/img/b1a.png" class="venobox" data-title="Portfolio tittle here" data-gall="gall1"></a>
+                            </div>
+                        </div>
+						
+						
+						
+						<!--- END COL -->
+                    </div>
+                </div>
+                <!--- END ROW -->
+            </div>
+            <!--- END CONTAINER -->
+        </section>
+        <!-- END PORTFOLIO -->
+		
+	
+	
+		
+     
+		 <section id="contact" class="section-padding">
+        <!-- START FOOTER -->
+        <footer class="footer-section">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <div class="footer-logo wow fadeInDown">
+                                <a class="img-responsive" href="index.html"><img src="assets/img/footer-logo.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="footer-social">
+                                <ul>
+                                   
+									<li><a data-toggle="tooltip" data-placement="top" title="Facebook" class="s-facebook" href="https://www.facebook.com/bettino.camarda.9/"><i class="fa fa-facebook"></i></a></li>
+<li><a data-toggle="tooltip" data-placement="top" title="Linkedin" class="s-linkedin" href="https://www.linkedin.com/in/bettino-camarda-ba0105119/"><i class="fa fa-linkedin"></i></a></li>
+<!-- Rimuovi il link di Youtube se non necessario -->
+<!-- Aggiungi il link a Google usando l'email -->
+<li><a data-toggle="tooltip" data-placement="top" title="Google" class="s-google" href="mailto:bettino.camarda@gmail.com"><i class="fa fa-google"></i></a></li>
+<!-- Aggiungi il link a Threads -->
+									<li>
+    <a data-toggle="tooltip" data-placement="top" title="Instagram" class="s-instagram" href="https://www.instagram.com/bettino.camarda/">
+        <i class="fa fa-instagram"></i>
+    </a>
+</li>
+
+									
+									
+									
+									
+                                </ul>
+                            </div>
+                        </div>
+                        <!--- END COL -->
+                    </div>
+                    <!--- END ROW -->
+                </div>
+                <!--- END CONTAINER -->
+            </div>
+			
+			  </section>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <div class="footer-copyright">
+                                <p>&copy; 2024. All Rights Reserved.</p>
+                                <p>Design By <a href="#">Bettino Camarda</a></p>
+                            </div>
+                        </div>
+                        <!--- END COL -->
+                    </div>
+                    <!--- END ROW -->
+                </div>
+                <!--- END CONTAINER -->
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+		
+        <!-- Latest jQuery -->
+        <script src="assets/js/jquery-1.12.4.min.js"></script>
+        <!-- Latest compiled and minified Bootstrap -->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <!-- modernizer JS -->
+        <script src="assets/js/modernizr-2.8.3.min.js"></script>
+		<!-- jquery particleground js -->
+		<script src="assets/js/jquery.particleground.min.js"></script>	
+		<script type="text/javascript">
+			  $('.particles').particleground({
+				dotColor: '#fff',
+				lineColor: '#fff'
+			  });
+
+		</script>	
+        <!-- jquery appear js  -->
+        <script src="assets/js/jquery.appear.js"></script>
+        <!-- countTo js -->
+        <script src="assets/js/jquery.inview.min.js"></script>
+        <!-- knob js -->
+        <script src="assets/js/jquery.knob.js"></script>
+        <!-- progress js -->
+        <script src="assets/js/progress-circle.js"></script>
+        <!-- venobox js -->
+        <script src="assets/venobox/js/venobox.min.js"></script>
+        <!-- jquery mixitup js -->
+        <script src="assets/js/jquery.mixitup.js"></script>
+        <!-- owl-carousel min js  -->
+        <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+        <!-- scrolltopcontrol js -->
+        <script src="assets/js/scrolltopcontrol.js"></script>
+        <!-- WOW - Reveal Animations When You Scroll -->
+        <script src="assets/js/wow.min.js"></script>
+        <!-- form-contact js -->
+        <script src="assets/js/form-contact.js"></script>
+        <!-- scripts js -->
+        <script src="assets/js/scripts.js"></script>
+    </body>
 </html>
